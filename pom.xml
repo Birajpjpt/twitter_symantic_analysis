@@ -32,7 +32,7 @@
 		<slf4j.version>1.7.7</slf4j.version>
 		<logback.version>1.1.2</logback.version>
 		<gelf.version>0.9.6</gelf.version>
-		<java.version>1.8</java.version>
+		<java.version>1.6</java.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<tomcat.username>manager</tomcat.username>
@@ -308,24 +308,7 @@
 					<target>${java.version}</target>
 				</configuration>
 			</plugin>
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.4</version>
-				<configuration>
-					<archive>
-						<manifestEntries>
-							<Specification-Title>${project.name}</Specification-Title>
-						</manifestEntries>
-					</archive>
-					<webResources>
-						<resource>
-							<targetPath>WEB-INF</targetPath>
-							<directory>src/main/webapp/WEB-INF</directory>
-							<filtering>true</filtering>
-						</resource>
-					</webResources>
-				</configuration>
-			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -340,59 +323,14 @@
 				</executions>
 			</plugin>
 			<plugin>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.7.1</version>
-				<executions>
-					<execution>
-						<id>default-test</id>
-						<phase>test</phase>
-						<goals>
-							<goal>test</goal>
-						</goals>
-						<configuration>
-							<excludes>
-								<exclude>**/integrationtests/**</exclude>
-								<exclude>**/systemtests/**</exclude>
-							</excludes>
-							<additionalClasspathElements>
-								<additionalClasspathElement>${basedir}/deployment/${environment}/</additionalClasspathElement>
-							</additionalClasspathElements>
-						</configuration>
-					</execution>
-					<execution>
-						<id>integration-tests</id>
-						<phase>integration-test</phase>
-						<goals>
-							<goal>test</goal>
-						</goals>
-						<configuration>
-							<includes>
-								<include>**/integrationtests/**</include>
-							</includes>
-							<additionalClasspathElements>
-								<additionalClasspathElement>${basedir}/deployment/${environment}/</additionalClasspathElement>
-							</additionalClasspathElements>
-							<argLine>-Dcatalina.home=${catalina.home}</argLine>
-						</configuration>
-					</execution>
-					<execution>
-						<id>system-tests</id>
-						<phase>integration-test</phase>
-						<goals>
-							<goal>test</goal>
-						</goals>
-						<configuration>
-							<skip>${skipSystemTests}</skip>
-							<includes>
-								<include>**/systemtests/**</include>
-							</includes>
-							<additionalClasspathElements>
-								<additionalClasspathElement>${basedir}/deployment/${environment}/</additionalClasspathElement>
-							</additionalClasspathElements>
-							<argLine>-Dcatalina.home=${catalina.home}</argLine>
-						</configuration>
-					</execution>
-				</executions>
+				<groupId>external.atlassian.jgitflow</groupId>
+				<artifactId>jgitflow-maven-plugin</artifactId>
+				<version>1.0-m4.3</version>
+				<configuration>
+					<allowUntracked>true</allowUntracked>
+					<pushHotfixes>true</pushHotfixes>
+					<pushReleases>true</pushReleases>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

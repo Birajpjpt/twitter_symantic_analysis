@@ -1,5 +1,7 @@
 package com.thehutgroup.security.jersey;
 
+import com.thehutgroup.security.model.Endpoint;
+
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.HEAD;
@@ -7,6 +9,7 @@ import javax.ws.rs.OPTIONS;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Application;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -22,8 +25,8 @@ public class JerseyTestUtils {
     private static final Set<Class<?>> ENDPOINT_ANNOTATIONS =
             new HashSet<Class<?>>(Arrays.<Class<?>>asList(GET.class, POST.class, PUT.class, DELETE.class, HEAD.class, OPTIONS.class));
 
-    public static List<String> getAllRESTfulEndpoints(Application application) {
-        List<String> endpoints = new ArrayList<>();
+    public static List<Endpoint> getAllRESTfulEndpoints(Application application) {
+        List<Endpoint> endpoints = new ArrayList<>();
 
         for (Class<?> aClass : application.getClasses()) {
             if (!isAnnotatedResourceClass(aClass)) {
@@ -38,8 +41,10 @@ public class JerseyTestUtils {
                 }
 
                 String methodPath = getPath(method);
+                String httpMethod = getMethod(method);
+                List<String> queryParams = getQueryParameters(method);
 
-                endpoints.add(getFullPath(classPath, methodPath));
+                endpoints.add(new Endpoint(httpMethod, getFullPath(classPath, methodPath), queryParams));
             }
         }
 
@@ -67,6 +72,27 @@ public class JerseyTestUtils {
             }
         }
         return false;
+    }
+
+    private static String getMethod(Method method) {
+        for (Annotation annotation : method.getAnnotations()) {
+            for (Class<?> annotationClass : ENDPOINT_ANNOTATIONS) {
+                if (annotation.annotationType().equals(annotationClass)) {
+                    return annotationClass.getSimpleName();
+                }
+            }
+        }
+        throw new IllegalArgumentException("Method annotation not found");
+    }
+
+    private static List<String> getQueryParameters(Method method) {
+        List<String> params = new ArrayList<>();
+        for(Annotation annotation : method.getAnnotations()) {
+            if(annotation.annotationType().equals(QueryParam.class)){
+                params.add(((QueryParam)annotation).value());
+            }
+        }
+        return params;
     }
 
     private static <T> String getPath(Class<T> aClass) {
