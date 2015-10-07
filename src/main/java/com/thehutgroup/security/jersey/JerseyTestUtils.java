@@ -87,9 +87,14 @@ public class JerseyTestUtils {
 
     private static List<String> getQueryParameters(Method method) {
         List<String> params = new ArrayList<>();
-        for(Annotation annotation : method.getAnnotations()) {
-            if(annotation.annotationType().equals(QueryParam.class)){
-                params.add(((QueryParam)annotation).value());
+        Annotation[][] annotations = method.getParameterAnnotations();
+        for(int i = 0; i < annotations.length; ++i) {
+            Annotation[] subAnnotations = annotations[i];
+            for(int j = 0; j < subAnnotations.length; ++j) {
+                Annotation annotation = subAnnotations[j];
+                if (annotation.annotationType().equals(QueryParam.class)) {
+                    params.add(((QueryParam) annotation).value());
+                }
             }
         }
         return params;
