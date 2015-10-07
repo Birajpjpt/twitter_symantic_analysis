@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration scan="false">
+	<!-- Basic Cyclic buffer -->
+	<appender name="CYCLIC" class="ch.qos.logback.core.read.CyclicBufferAppender">
+		<MaxSize>60</MaxSize>
+	</appender>
+	
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+            <pattern>%-26(%d{yyyy-MM-dd HH:mm:ss,SSS} [%thread]) %-5level %logger{32} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<root level="INFO">
+		<appender-ref ref="CYCLIC" />
+		<appender-ref ref="CONSOLE" />
+	</root>
+</configuration>
