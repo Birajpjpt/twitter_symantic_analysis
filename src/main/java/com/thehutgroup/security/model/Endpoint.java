@@ -18,6 +18,22 @@ public class Endpoint {
         this.path = path;
     }
 
+    public String getHttpMethod() {
+        return httpMethod;
+    }
+
+    public void setHttpMethod(String httpMethod) {
+        this.httpMethod = httpMethod;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
     public Endpoint(String httpMethod, String path, List<String> params) {
         this.httpMethod = httpMethod;
         if(params != null && params.size() > 0){
@@ -38,15 +54,16 @@ public class Endpoint {
 
         Endpoint endpoint = (Endpoint) o;
 
-        if (httpMethod != null ? !httpMethod.equals(endpoint.httpMethod) : endpoint.httpMethod != null) return false;
-        return !(path != null ? !path.equals(endpoint.path) : endpoint.path != null);
+        if (getHttpMethod() != null ? !getHttpMethod().equals(endpoint.getHttpMethod()) : endpoint.getHttpMethod() != null)
+            return false;
+        return !(getPath() != null ? !getPath().equals(endpoint.getPath()) : endpoint.getPath() != null);
 
     }
 
     @Override
     public int hashCode() {
-        int result = httpMethod != null ? httpMethod.hashCode() : 0;
-        result = 31 * result + (path != null ? path.hashCode() : 0);
+        int result = getHttpMethod() != null ? getHttpMethod().hashCode() : 0;
+        result = 31 * result + (getPath() != null ? getPath().hashCode() : 0);
         return result;
     }
 }
