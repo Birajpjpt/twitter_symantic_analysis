@@ -26,7 +26,7 @@ public class JerseyTestUtils {
             new HashSet<Class<?>>(Arrays.<Class<?>>asList(GET.class, POST.class, PUT.class, DELETE.class, HEAD.class, OPTIONS.class));
 
     public static List<Endpoint> getAllRESTfulEndpoints(Application application) {
-        List<Endpoint> endpoints = new ArrayList<>();
+        List<Endpoint> endpoints = new ArrayList<Endpoint>();
 
         for (Class<?> aClass : application.getClasses()) {
             if (!isAnnotatedResourceClass(aClass)) {
@@ -86,7 +86,7 @@ public class JerseyTestUtils {
     }
 
     private static List<String> getQueryParameters(Method method) {
-        List<String> params = new ArrayList<>();
+        List<String> params = new ArrayList<String>();
         Annotation[][] annotations = method.getParameterAnnotations();
         for(int i = 0; i < annotations.length; ++i) {
             Annotation[] subAnnotations = annotations[i];

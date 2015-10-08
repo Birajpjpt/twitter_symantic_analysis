@@ -37,7 +37,7 @@ public class Endpoint {
     public Endpoint(String httpMethod, String path, List<String> params) {
         this.httpMethod = httpMethod;
         if(params != null && params.size() > 0){
-            List<String> queryParams = new ArrayList<>();
+            List<String> queryParams = new ArrayList<String>();
             for(String query: params){
                 queryParams.add("[" + query + "]");
             }
