@@ -1,0 +1,18 @@
+## Eclipse
+target/
+.settings/
+.classpath
+.project
+
+## Gradle
+.gradle/
+
+## Intellij
+.idea/
+
+## Archives
+*.zip
+
+## Misc Files
+*.log
+testutils.iml
