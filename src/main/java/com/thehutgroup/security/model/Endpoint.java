@@ -66,4 +66,9 @@ public class Endpoint {
         result = 31 * result + (getPath() != null ? getPath().hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return httpMethod + '-' + path;
+    }
 }
