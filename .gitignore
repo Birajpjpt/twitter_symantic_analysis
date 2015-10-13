@@ -9,6 +9,7 @@ target/
 
 ## Intellij
 .idea/
+security-test-utils.iml
 
 ## Archives
 *.zip
