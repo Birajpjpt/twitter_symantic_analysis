@@ -1,7 +1,13 @@
 package com.thehutgroup.security.jersey;
 
-import com.thehutgroup.security.model.Endpoint;
-
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.HEAD;
@@ -11,14 +17,9 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Application;
-import java.lang.annotation.Annotation;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+
+import com.thehutgroup.security.model.Endpoint;
+import com.thehutgroup.security.util.AnnotationUtil;
 
 public class JerseyTestUtils {
 
@@ -52,17 +53,7 @@ public class JerseyTestUtils {
     }
 
     private static <T> boolean isAnnotatedResourceClass(Class<T> rc) {
-        if (rc.isAnnotationPresent(Path.class)) {
-            return true;
-        }
-
-        for (Class<?> i : rc.getInterfaces()) {
-            if (i.isAnnotationPresent(Path.class)) {
-                return true;
-            }
-        }
-
-        return false;
+        return AnnotationUtil.isAnnotationPresent(rc, Path.class);
     }
 
     private static boolean isEndpointMethod(Method method) {
