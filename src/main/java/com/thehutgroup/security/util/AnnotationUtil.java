@@ -32,5 +32,5 @@ public class AnnotationUtil
         return classAnnotation;
     }
 
-    private AnnotationUtil() {}
+    //private AnnotationUtil() {}
 }
