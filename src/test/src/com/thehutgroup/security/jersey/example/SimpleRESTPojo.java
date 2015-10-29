@@ -1,13 +1,12 @@
 package com.thehutgroup.security.jersey.example;
 
 import javax.ws.rs.*;
-import java.util.Date;
 
 @Path("/pojo")
 public class SimpleRESTPojo {
     @GET
     public String pojo() {
-        return "pojo ok @ " + new Date().toString();
+        return "pojo ok";
     }
 
     @Path("{c}")

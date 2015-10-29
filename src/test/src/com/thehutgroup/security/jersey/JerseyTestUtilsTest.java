@@ -41,7 +41,7 @@ public class JerseyTestUtilsTest {
     public void test_SimpleRESTPojo()
     {
         SimpleRESTPojo simpleRESTPojo = new SimpleRESTPojo();
-        assertEquals(simpleRESTPojo.pojo(), "pojo ok @ " + new Date().toString());
+        assertEquals(simpleRESTPojo.pojo(), "pojo ok");
         assertEquals(simpleRESTPojo.withPathParam((double)12), "it's 42");
     }
     //reflection methods

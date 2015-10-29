@@ -37,7 +37,7 @@ public class ControllerAnnotationScannerTest {
     public void method_buildPath() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException
     {
         assertEquals(buildPath("aaa"  ,"bbb"  ), "aaa/bbb"   );
-        assertEquals(buildPath("aaa"  ,"/bbb"), "aaa/bbb"    );
+        assertEquals(buildPath("aaa"  ,"/bbb" ), "aaa/bbb"    );
         assertEquals(buildPath("/aaa" ,"bbb"  ), "/aaa/bbb"  );
         assertEquals(buildPath("/aaa" ,"/bbb" ), "/aaa/bbb"  );
         assertEquals(buildPath("/aaa/","/bbb" ), "/aaa//bbb" );
