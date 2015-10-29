@@ -17,3 +17,4 @@ security-test-utils.iml
 ## Misc Files
 *.log
 testutils.iml
+*.iml
