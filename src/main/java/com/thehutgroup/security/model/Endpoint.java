@@ -1,21 +1,21 @@
 package com.thehutgroup.security.model;
 
-import org.apache.commons.lang.StringUtils;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.commons.lang.StringUtils;
 
 /**
  * Created by nevinc on 07/10/2015.
  */
-public class Endpoint {
+public class Endpoint implements Comparable<Endpoint> {
 
     private String httpMethod;
     private String path;
 
     public Endpoint(String httpMethod, String path) {
-        this.httpMethod = httpMethod;
-        this.path = path;
+        this.setHttpMethod(httpMethod);
+        this.setPath(path);
     }
 
     public String getHttpMethod() {
@@ -23,7 +23,11 @@ public class Endpoint {
     }
 
     public void setHttpMethod(String httpMethod) {
-        this.httpMethod = httpMethod;
+        if (httpMethod == null) {
+            this.httpMethod = "";
+        } else {
+            this.httpMethod = httpMethod;
+        }
     }
 
     public String getPath() {
@@ -31,19 +35,23 @@ public class Endpoint {
     }
 
     public void setPath(String path) {
-        this.path = path;
+        if (path == null) {
+            this.path = "";
+        } else {
+            this.path = path;
+        }
     }
 
     public Endpoint(String httpMethod, String path, List<String> params) {
-        this.httpMethod = httpMethod;
+        this.setHttpMethod(httpMethod);
         if(params != null && params.size() > 0){
             List<String> queryParams = new ArrayList<String>();
             for(String query: params){
                 queryParams.add("[" + query + "]");
             }
-            this.path = path + "?" + StringUtils.join(queryParams, "&");
+            this.setPath(path + "?" + StringUtils.join(queryParams, "&"));
         } else {
-            this.path = path;
+            this.setPath(path);
         }
     }
 
@@ -65,6 +73,20 @@ public class Endpoint {
         int result = getHttpMethod() != null ? getHttpMethod().hashCode() : 0;
         result = 31 * result + (getPath() != null ? getPath().hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public int compareTo(Endpoint o)
+    {
+        if (o == null) {
+            throw new IllegalArgumentException("o is null!");
+        }
+
+        final int httpMethodCompare = this.httpMethod.compareTo(o.httpMethod);
+        if (httpMethodCompare != 0) {
+            return httpMethodCompare;
+        }
+        return this.path.compareTo(o.path);
     }
 
     @Override
