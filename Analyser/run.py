@@ -88,8 +88,8 @@ class run:
 
 
 
-# x = run()
-# # x.SVMtestFile('../testing_file.csv')
-# x.SVMtestSingleTweet('I do not believe that my internet service provider is giving me good service. I contact them over e-mail and they never get back to me!')
-# # x.multiAnalysis('../testing_file.csv')
-# x.getResult('I do not believe that my internet service provider is giving me good service. I contact them over e-mail and they never get back to me!')
+x = run()
+x.SVMtestFile('../testing_file.csv')
+x.SVMtestSingleTweet('I do not believe that my internet service provider is giving me good service. I contact them over e-mail and they never get back to me!')
+x.multiAnalysis('../testing_file.csv')
+x.getResult('I do not believe that my internet service provider is giving me good service. I contact them over e-mail and they never get back to me!')
