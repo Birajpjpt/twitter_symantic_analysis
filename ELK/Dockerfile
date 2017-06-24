@@ -2,8 +2,10 @@
 FROM ubuntu:16.04
 
 # initial update
-RUN apt-get update -y && \
-                    apt-get install -y wget default-jre-headless mini-httpd
+RUN apt-get update -y
+RUN apt-get install -y wget
+RUN apt-get install -y default-jre-headless
+RUN apt-get install -y mini-httpd
 
 # install elasticsearch
 RUN cd /tmp && \
