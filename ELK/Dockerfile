@@ -2,10 +2,10 @@
 FROM ubuntu:16.04
 
 # initial update
-RUN apt-get update -y
-RUN apt-get install -y wget
-RUN apt-get install -y default-jre-headless
-RUN apt-get install -y mini-httpd
+RUN apt-get update -q
+RUN apt-get install -yq wget
+RUN apt-get install -yq default-jre-headless
+RUN apt-get install -yq mini-httpd
 
 # install elasticsearch
 RUN cd /tmp && \
@@ -22,7 +22,7 @@ RUN cd /tmp && \
     mv /tmp/kibana-3.1.2 /kibana
 
 # start elasticsearch
-CMD /elasticsearch/bin/elasticsearch -Des.logger.level=OFF & mini-httpd -d /kibana -h `hostname` -r -D -p 8000
+CMD /elasticsearch/bin/elasticsearch -Des.logger.level=OFF & mini_httpd -d /kibana -h `hostname` -r -D -p 8000
 
 # expose ports
 EXPOSE 8000 9200
