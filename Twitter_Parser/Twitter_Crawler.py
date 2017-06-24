@@ -4,6 +4,7 @@ import tweepy
 from tweepy import OAuthHandler
 import time
 import json
+
 from pprint import pprint
 
 class Twitter:
