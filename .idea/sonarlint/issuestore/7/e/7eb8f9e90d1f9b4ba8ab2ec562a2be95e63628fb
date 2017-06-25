@@ -1,0 +1,3 @@
+
+.python:S2325"Make this method static.(ÎµÅÏ
+hpython:S100"SRename method "processTweet" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÎµÅÏ

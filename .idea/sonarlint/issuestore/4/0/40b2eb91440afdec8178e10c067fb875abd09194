@@ -1,0 +1,11 @@
+
+6python:S1110" Remove those useless parentheses(€¤¸º
+ppython:S100"VRename method "extractFeatures" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(æì¨ãÿÿÿÿÿ
+upython:S100"[Rename method "trainingSetExtractor" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(®¶©õøÿÿÿÿ
+mpython:S117"SRename this parameter "csvFile" to match the regular expression ^[_a-z][a-z0-9_]*$.(®¶©õøÿÿÿÿ
+~python:S117"dRename this local variable "allTweetsSentiments" to match the regular expression ^[_a-z][a-z0-9_]*$.(şƒÖÊşÿÿÿÿ
+tpython:S117"ZRename this local variable "stopWords" to match the regular expression ^[_a-z][a-z0-9_]*$.(™ñëäùÿÿÿÿ
+ypython:S117"_Rename this local variable "processedTweet" to match the regular expression ^[_a-z][a-z0-9_]*$.(å’îıÿÿÿÿ
+spython:S117"^Rename this local variable "featureVector" to match the regular expression ^[_a-z][a-z0-9_]*$.(œ’÷
+rpython:S116"XRename this field "filterTweetWords" to match the regular expression ^[_a-z][_a-z0-9]*$.(«—É¢ıÿÿÿÿ
+hpython:S116"SRename this field "featureList" to match the regular expression ^[_a-z][_a-z0-9]*$.(ØÕ£

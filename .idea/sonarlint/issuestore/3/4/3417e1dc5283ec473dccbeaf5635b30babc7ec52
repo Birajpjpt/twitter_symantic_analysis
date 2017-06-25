@@ -1,0 +1,25 @@
+
+spython:S117"^Rename this local variable "featureVector" to match the regular expression ^[_a-z][a-z0-9_]*$.(üã ™
+vpython:S117"aRename this local variable "filterTweetWords" to match the regular expression ^[_a-z][a-z0-9_]*$.(¾ÉñØ
+npython:S116"TRename this field "nbClassifier" to match the regular expression ^[_a-z][_a-z0-9]*$.(“óÇ„üÿÿÿÿ
+vpython:S117"aRename this local variable "extractedFeature" to match the regular expression ^[_a-z][a-z0-9_]*$.(”Èş
+Qpython:PrintStatementUsage"-Replace print statement by built-in function.(†¢¦î
+qpython:S1542"TRename function "NVBTestFile" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÙßÆ«8‘šàáÍ+
+ypython:S117"_Rename this local variable "processedTweet" to match the regular expression ^[_a-z][a-z0-9_]*$.(Õ´éüıÿÿÿÿ
+xpython:S117"^Rename this local variable "sortedFeature" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÅõÓ«úÿÿÿÿ
+xpython:S117"^Rename this local variable "featureVector" to match the regular expression ^[_a-z][a-z0-9_]*$.(½ÔÚ½üÿÿÿÿ
+mpython:S116"SRename this field "filterTweet" to match the regular expression ^[_a-z][_a-z0-9]*$.(¸œªèûÿÿÿÿ
+jpython:S116"PRename this field "svmModel" to match the regular expression ^[_a-z][_a-z0-9]*$.(Ôş­¡ıÿÿÿÿ
+qpython:S1542"TRename function "SVMTestFile" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÈµÍÂ8‘šàáÍ+
+tpython:S117"ZRename this local variable "testTweet" to match the regular expression ^[_a-z][a-z0-9_]*$.(Íÿ²ƒúÿÿÿÿ
+tpython:S117"_Rename this local variable "processedTweet" to match the regular expression ^[_a-z][a-z0-9_]*$.(¾ÆÖú
+tpython:S1542"WRename function "NVBSingleTweet" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÓŠè­8‘šàáÍ+
+spython:S117"^Rename this local variable "featureVector" to match the regular expression ^[_a-z][a-z0-9_]*$.(üã ™
+ypython:S1542"WRename function "SVMSingleTweet" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(¤íÄÉıÿÿÿÿ8‘šàáÍ+
+jpython:S116"URename this field "svmClassifier" to match the regular expression ^[_a-z][_a-z0-9]*$.(ĞèµÉ
+tpython:S117"_Rename this local variable "processedTweet" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ş˜ú¾
+Ppython:PrintStatementUsage"-Replace print statement by built-in function.(Ğ±“
+vpython:S117"aRename this local variable "extractedFeature" to match the regular expression ^[_a-z][a-z0-9_]*$.(”Èş
+ipython:S101"TRename class "test_classifier" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(ÈÀ”â
+xpython:S117"dRename this local variable "allTweetsSentiments" to match the regular expression ^[_a-z][a-z0-9_]*$.(©µ÷/
+qpython:S117"\Rename this local variable "featureList" to match the regular expression ^[_a-z][a-z0-9_]*$.(üˆŸˆ

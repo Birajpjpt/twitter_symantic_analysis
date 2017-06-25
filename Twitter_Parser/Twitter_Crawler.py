@@ -4,8 +4,13 @@ import tweepy
 from tweepy import OAuthHandler
 import time
 import json
+from elasticsearch import Elasticsearch
+import requests
+
 
 from pprint import pprint
+
+es = Elasticsearch([{'host': 'ec2-54-157-23-248.compute-1.amazonaws.com', 'port': 9200}])
 
 class Twitter:
 
@@ -42,8 +47,9 @@ class Twitter:
     #         continue
     #     except StopIteration:
     #         break
-    for tweet in tweepy.Cursor(api.search, q="wannacrypt").items():
-        print tweet
+    for raw_data in tweepy.Cursor(api.search, q="wannacrypt").items(1):
+        data = json.dumps(raw_data._json)
+        # print tweet.Status
         count = count + 1
         print count
 

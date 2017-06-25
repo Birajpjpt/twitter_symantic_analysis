@@ -4,7 +4,7 @@ import csv
 import pickle
 import svm
 from svmutil import *
-from location import AbsolutePath
+from app.location import AbsolutePath
 
 
 class FilterTweetWords:

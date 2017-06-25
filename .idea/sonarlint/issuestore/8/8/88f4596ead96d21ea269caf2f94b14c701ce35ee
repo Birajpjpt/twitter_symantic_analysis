@@ -1,0 +1,10 @@
+
+.python:S2325"Make this method static.(»³Ğ
+3python:S2325"Make this method static.(‚Ù¹›úÿÿÿÿ
+9python:S125"Remove this commented out code.(”½¹’ÿÿÿÿÿ
+wpython:S100"bRename method "replaceRepetitiveCharacters" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(»³Ğ
+npython:S100"TRename method "stopWordsList" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(‚Ù¹›úÿÿÿÿ
+lpython:S100"WRename method "getFeatureVector" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(¸öÇØ
+qpython:S101"WRename class "Filter_Tweet_Words" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(÷Ö˜İÿÿÿÿÿ
+npython:S117"ZRename this local variable "stopWords" to match the regular expression ^[_a-z][a-z0-9_]*$.(£ˆÈ,
+xpython:S117"^Rename this local variable "featureVector" to match the regular expression ^[_a-z][a-z0-9_]*$.(ºÀãùÿÿÿÿ

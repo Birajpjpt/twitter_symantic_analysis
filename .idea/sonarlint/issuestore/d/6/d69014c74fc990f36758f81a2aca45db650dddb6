@@ -1,0 +1,35 @@
+
+spython:S100"^Rename method "SVMTrainingSetExtractor" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ãşæ¶
+hpython:S100"SRename method "processTweet" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ëµì
+;python:S1110" Remove those useless parentheses(†À¦‰ùÿÿÿÿ
+lpython:S100"WRename method "getFeatureVector" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(¸öÇØ
+spython:S117"^Rename this local variable "featureVector" to match the regular expression ^[_a-z][a-z0-9_]*$.(œ’÷
+ppython:S100"VRename method "extractFeatures" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(æì¨ãÿÿÿÿÿ
+mpython:S117"SRename this parameter "csvFile" to match the regular expression ^[_a-z][a-z0-9_]*$.(³ó­‚øÿÿÿÿ
+npython:S116"TRename this field "nbClassifier" to match the regular expression ^[_a-z][_a-z0-9]*$.(“óÇ„üÿÿÿÿ
+rpython:S117"]Rename this local variable "NBClassifier" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ç²Ìé
+npython:S117"ZRename this local variable "stopWords" to match the regular expression ^[_a-z][a-z0-9_]*$.(£ˆÈ,
+xpython:S100"^Rename method "NVBTrainingSetExtractor" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(³ó­‚øÿÿÿÿ
+ipython:S100"TRename method "NVBclassifier" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(šäØÕ
+hpython:S117"SRename this parameter "csvFile" to match the regular expression ^[_a-z][a-z0-9_]*$.(ãşæ¶
+vpython:S116"\Rename this field "featureListExtractor" to match the regular expression ^[_a-z][_a-z0-9]*$.(óÖÉ­úÿÿÿÿ
+ipython:S100"TRename method "SVMClassifier" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ª«¤”
+hpython:S117"SRename this parameter "csvFile" to match the regular expression ^[_a-z][a-z0-9_]*$.(–ÌÍè
+.python:S2325"Make this method static.(ëµì
+.python:S2325"Make this method static.(»³Ğ
+tpython:S117"ZRename this local variable "stopWords" to match the regular expression ^[_a-z][a-z0-9_]*$.(™ñëäùÿÿÿÿ
+ˆpython:S1845"rRename method "SVMClassifier" to prevent any misunderstanding/clash with field "svmClassifier" defined on line 131(ª«¤”
+~python:S117"dRename this local variable "allTweetsSentiments" to match the regular expression ^[_a-z][a-z0-9_]*$.(şƒÖÊşÿÿÿÿ
+upython:S116"TRename this field "stopWordPath" to match the regular expression ^[_a-z][_a-z0-9]*$.(‰ËÃáûÿÿÿÿ8ÉˆºãÍ+
+3python:S125"Remove this commented out code.(õòÿ:
+ypython:S117"_Rename this local variable "processedTweet" to match the regular expression ^[_a-z][a-z0-9_]*$.(ØÀªÌúÿÿÿÿ
+jpython:S116"URename this field "svmClassifier" to match the regular expression ^[_a-z][_a-z0-9]*$.(ĞèµÉ
+hpython:S116"SRename this field "featureList" to match the regular expression ^[_a-z][_a-z0-9]*$.(ØÕ£
+wpython:S100"bRename method "replaceRepetitiveCharacters" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(»³Ğ
+npython:S100"TRename method "stopWordsList" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(‚Ù¹›úÿÿÿÿ
+upython:S100"`Rename method "getFeatureVectorSentiment" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(–ÌÍè
+tpython:S117"_Rename this local variable "sortedFeatures" to match the regular expression ^[_a-z][a-z0-9_]*$.(›õİæ
+xpython:S117"^Rename this local variable "featureVector" to match the regular expression ^[_a-z][a-z0-9_]*$.(ºÀãùÿÿÿÿ
+;python:S1110" Remove those useless parentheses(¶ˆ£Óüÿÿÿÿ
+rpython:S116"XRename this field "filterTweetWords" to match the regular expression ^[_a-z][_a-z0-9]*$.(àÎÓÿÿÿÿÿ
+tpython:S117"ZRename this local variable "stopWords" to match the regular expression ^[_a-z][a-z0-9_]*$.(™ñëäùÿÿÿÿ

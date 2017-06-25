@@ -1,4 +1,4 @@
-from modules.modules import TrainClassifier
+from app.modules.modules import TrainClassifier
 
 if __name__ == "__main__":
     training_model_extractor = TrainClassifier()
