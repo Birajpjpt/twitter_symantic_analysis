@@ -69,7 +69,7 @@ class test_classifier:
             values = map.values()
             feature_vector_test.append(values)
 
-            p_labels, p_accs, p_vals = svm_predict([0] * len(feature_vector_test), feature_vector_test, self.svmModel, options='-b 1')
+            p_labels, p_accs, p_vals = svm_predict([0] * len(feature_vector_test), feature_vector_test, self.svmModel, options='-q -b 1')
 
             for probs in p_vals:
                 positive_probability = str(probs[0])
