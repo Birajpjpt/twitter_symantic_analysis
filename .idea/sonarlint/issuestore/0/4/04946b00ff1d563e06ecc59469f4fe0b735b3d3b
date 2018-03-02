@@ -1,37 +1,0 @@
-
-€python:S100"dRename method "test_processTweetReducesNoise" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(£÷‹Ê8ŸÀ¤×Í+
-‘python:S100"pRename method "test_getFeatureVectorReturnsFilteredWords" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(È‰ã”şÿÿÿÿ8éâØÍ+
-€python:S117"_Rename this local variable "processedTweet" to match the regular expression ^[_a-z][a-z0-9_]*$.(«†‰µüÿÿÿÿ8éâØÍ+
-†python:S100"eRename method "test_SVMClassifierOutputsModel" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(¶Æ¿Õûÿÿÿÿ8Ñç•ŞÍ+
-python:S117"^Rename this local variable "positiveProbs" to match the regular expression ^[_a-z][a-z0-9_]*$.(®üéşÿÿÿÿ8€ŠôáÍ+
-Œpython:S100"pRename method "test_getFeatureVectorSentimentReturnsList" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(àİƒé8‰à×ÜÍ+
-’python:S100"qRename method "test_filterTweetWordsInitiatesAllStopWords" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ŸÒö¶ıÿÿÿÿ8ºŞòÖÍ+
-„python:S100"hRename method "test_RepetitiveCharactersReplaced" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(å†œº8â¡è×Í+
-“python:S100"rRename method "test_SVMExtractorReturnsNonEmptyTrainingSet" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÆÚ½ˆüÿÿÿÿ8ğÄ„İÍ+
-python:S117"^Rename this local variable "negativeProbs" to match the regular expression ^[_a-z][a-z0-9_]*$.(®üéşÿÿÿÿ8€ŠôáÍ+
-†python:S100"jRename method "test_nvbSingleTweetReturnsSentiment" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ŞäØÆ8ÀÈáÍ+
-–python:S100"uRename method "test_filterTweetWordsGetsStopWordsFileLocation" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(÷Ú€àÿÿÿÿÿ8ğçÕØÍ+
-python:S100"cRename method "test_SVMExtractorReturnsDict" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(Ñãæ—8çØğÜÍ+
-†python:S100"jRename method "test_NVBExtractorReturnsNltkLazyMap" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(íÏØ»8´…àÛÍ+
-~python:S117"]Rename this local variable "svmSentiment" to match the regular expression ^[_a-z][a-z0-9_]*$.(®üéşÿÿÿÿ8€ŠôáÍ+
-python:S117"^Rename this local variable "positiveProbs" to match the regular expression ^[_a-z][a-z0-9_]*$.(®üéşÿÿÿÿ8‰ÕúáÍ+
-ypython:S117"]Rename this local variable "nvbSentiment" to match the regular expression ^[_a-z][a-z0-9_]*$.(š´®Í8ÀÈáÍ+
-xpython:S117"\Rename this local variable "nvbKeywords" to match the regular expression ^[_a-z][a-z0-9_]*$.(š´®Í8Ú¶áÍ+
-~python:S117"]Rename this local variable "svmSentiment" to match the regular expression ^[_a-z][a-z0-9_]*$.(®üéşÿÿÿÿ8‰ÕúáÍ+
-™python:S100"xRename method "test_featureListExtractorGetsTrainingFileLocation" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(İÜŒòúÿÿÿÿ8™Ñ†ŞÍ+
-Špython:S100"nRename method "test_nvbSingleTweetReturnsStringAndList" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(Óùƒ—8¿³áÍ+
-‹python:S100"jRename method "test_svmSingleTweetReturnsSentiment" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(¡«ÈØøÿÿÿÿ8üÊûáÍ+
-¢python:S100"€Rename method "test_getFeatureVectorSentimentReturnsKeywordsAndSentiment" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ƒÚµ×ûÿÿÿÿ8‰à×ÜÍ+
-‚python:S100"fRename method "test_extractFeaturesReturnsDict" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ÍË¥õ8ú©ÉÛÍ+
-†python:S100"eRename method "test_NVBClassifierOutputsModel" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(óû»¨şÿÿÿÿ8øÉŒŞÍ+
-†python:S100"jRename method "test_extractFeaturesReturnsFeatures" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ˆ‰ıú8ÿÄ‚ÛÍ+
-ypython:S117"]Rename this local variable "nvbSentiment" to match the regular expression ^[_a-z][a-z0-9_]*$.(š´®Í8Ú¶áÍ+
-†python:S100"eRename method "test_processTweetReturnsString" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(à¹Î÷ûÿÿÿÿ8…ÖêÖÍ+
-xpython:S117"\Rename this local variable "nvbKeywords" to match the regular expression ^[_a-z][a-z0-9_]*$.(š´®Í8ÀÈáÍ+
-Špython:S100"iRename method "test_AbsolutePathInitiatesAllPaths" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(îÿ‡½ıÿÿÿÿ8 —§ŞÍ+
-•python:S100"tRename method "test_featureListExtractorPopulatesFeatureList" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(Æ±¥¯üÿÿÿÿ8¡ŠÚÍ+
-’python:S100"qRename method "test_svmSingleTweetReturnsStringFloatsList" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(Öªù¬úÿÿÿÿ8íšòáÍ+
-python:S117"^Rename this local variable "negativeProbs" to match the regular expression ^[_a-z][a-z0-9_]*$.(®üéşÿÿÿÿ8‰ÕúáÍ+
-python:S100"rRename method "test_NVBExtractorReturnsNonEmptyTrainingSet" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(Á²¸8®ÒûÜÍ+
-ƒpython:S100"gRename method "test_getFeatureVectorReturnsList" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(Ôéú8ì”ÿ×Í+
-™python:S100"xRename method "test_featureListExtractorGetsTrainingFileLocation" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(İÜŒòúÿÿÿÿ8ğçÕØÍ+

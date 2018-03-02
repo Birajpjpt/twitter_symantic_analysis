@@ -1,12 +1,9 @@
 from flask import Flask, jsonify, request
 import os, sys
 from task.test_classifier import test_classifier
-
 app = Flask(__name__)
 version = '/api/v1.0'
-
 run = test_classifier()
-
 
 @app.route('/')
 def welcome():
@@ -42,6 +39,5 @@ def naive_bayes_predict():
 if __name__ == '__main__':
     import os, sys
     sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-    # print sys.path
     app.run(debug=True, host='0.0.0.0')
 

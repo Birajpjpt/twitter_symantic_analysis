@@ -1,6 +1,0 @@
-
-.python:S2325"Make this method static.(°ä—£
-mpython:S101"SRename class "streamListener" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(ºËä·ûÿÿÿÿ
-.python:S2325"Make this method static.(¶í 
-lpython:S101"WRename class "set_twitter_config" to match the regular expression ^[A-Z_][a-zA-Z0-9]+$.(öªóÓ
-kpython:S116"QRename this field "apiKeySet" to match the regular expression ^[_a-z][_a-z0-9]*$.(š¾Ğ´üÿÿÿÿ
