@@ -7,6 +7,7 @@ import nltk
 import csv
 from tabulate import tabulate
 from svmutil import *
+import time
 
 class test_classifier:
     try:
@@ -31,25 +32,51 @@ class test_classifier:
             return self.classifier.classify(extractedFeature), featureVector
 
         def NVBTestFile(self, test_tweet_file):
-            allTweetsSentiments = csv.reader(open(test_tweet_file, 'rb'), delimiter = ',')
-            table_header = ['Tweet', 'Sentiment']
+            t1 = time.time()
+            allTweetsSentiments = csv.reader(open(test_tweet_file, 'rb'), delimiter = '|')
+            table_header = ['Tweet', 'Predicted_ Sentiment', 'Actual Sentiment']
             table_data = []
             for rows in allTweetsSentiments:
                 tweet = rows[1]
                 processedTweet = self.filterTweet.processTweet(tweet)
                 featureVector = self.filterTweet.getFeatureVector(processedTweet)
                 extractedFeature = self.extractor.extractFeatures(featureVector)
-                table_data.append((tweet, str(self.classifier.classify(extractedFeature))))
+                table_data.append((tweet, str(self.classifier.classify(extractedFeature)), rows[0]))
             testing_data = self.extractor.NVBTrainingSetExtractor(test_tweet_file)
+
+            t2 = time.time()
+            time_taken = t2-t1
+            time_minute, time_second = time_taken // 60, time_taken % 60
+
             print '\nNaive Bayes Classification Result:'
-            print('Accuracy = ' + str(nltk.classify.accuracy(self.classifier, testing_data) * 100) + '% \n\n' )
+            print('Accuracy = ' + str(nltk.classify.accuracy(self.classifier, testing_data) * 100) + '%\nTime taken: '+str(time_minute)+' mins '+str(time_second)+' secs\n\n' )
             print tabulate(table_data, table_header)
 
         def SVMTestFile(self, test_tweet_file):
-            test_feature_vector_and_labels = self.extractor.SVMTrainingSetExtractor(test_tweet_file)
-            test_feature_vector = test_feature_vector_and_labels['feature_vector']
-            print('\n\nSVM Classification Result:')
-            svm_predict([0] * len(test_feature_vector), test_feature_vector, self.svmModel, options='-b 1')
+            t1 = time.time()
+            allTweetsSentiments = csv.reader(open(test_tweet_file, 'rb'), delimiter = '|')
+            table_header = ['Tweet', 'Predicted_ Sentiment', 'Actual Sentiment']
+            table_data = []
+            rows_count = 0.0000
+            correct_prediction = 0.0000
+            for rows in allTweetsSentiments:
+                tweet = rows[1]
+                Actual_Sentiment = rows[0]
+                Predicted_Sentiment, positive_probability, negative_probability, keywords = self.SVMSingleTweet(tweet)
+                table_data.append((tweet, Predicted_Sentiment, Actual_Sentiment))
+                rows_count = rows_count + 1
+                if Predicted_Sentiment == Actual_Sentiment:
+                    correct_prediction = correct_prediction + 1
+
+            t2 = time.time()
+            time_taken = t2-t1
+            time_minute, time_second = time_taken // 60, time_taken % 60
+
+            print '\nSVM Classification Result:'
+            accuracy = float(correct_prediction/rows_count) * 100
+            print('Accuracy = ' + str(accuracy) + '%\nTime taken: '+str(time_minute)+' mins '+str(time_second)+' secs\n\n')
+            print tabulate(table_data, table_header)
+
 
         def SVMSingleTweet(self, tweet):
             map = {}
@@ -75,10 +102,14 @@ class test_classifier:
                 positive_probability = str(probs[0])
                 negative_probability = str(probs[1])
             if p_labels[0] == 0.0:
-                sentiment = 'Negative'
+                sentiment = 'negative'
             elif p_labels[0] == 1.0:
-                sentiment = 'Positive'
+                sentiment = 'positive'
             return sentiment, positive_probability, negative_probability, keywords
 
     except Exception as e:
         print(e)
+
+# x = test_classifier()
+# x.NVBTestFile('./../data_files/testing_file.csv')
+# x.SVMTestFile('./../data_files/testing_file.csv')

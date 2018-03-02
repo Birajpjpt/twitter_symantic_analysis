@@ -72,14 +72,8 @@ class FeatureListExtractor:
             features['contains(%s)' % word] = word in tweet_words
         return features
 
-    def NVBTrainingSetExtractor(self, csvFile):
-        stopWords = self.filterTweetWords.stopWordsList()
-        tweets = self.getFeatureVectorSentiment(csvFile)
-        training_set = nltk.classify.util.apply_features(self.extractFeatures, tweets)
-        return training_set
-
     def getFeatureVectorSentiment(self, csvFile):
-        allTweetsSentiments = csv.reader(open(csvFile, 'rb'), delimiter=',')
+        allTweetsSentiments = csv.reader(open(csvFile, 'rb'), delimiter='|')
         stopWords = self.filterTweetWords.stopWordsList()
         tweets = []
         for row in allTweetsSentiments:
@@ -88,9 +82,18 @@ class FeatureListExtractor:
             processedTweet = self.filterTweetWords.processTweet(tweet)
             featureVector = self.filterTweetWords.getFeatureVector(processedTweet)
             self.featureList.extend(featureVector)
-            tweets.append((featureVector, sentiment));
+            tweets.append((featureVector, sentiment))
         self.featureList = list(set(self.featureList))
         return tweets
+
+
+    def NVBTrainingSetExtractor(self, csvFile):
+        stopWords = self.filterTweetWords.stopWordsList()
+        tweets = self.getFeatureVectorSentiment(csvFile)
+        training_set = nltk.classify.util.apply_features(self.extractFeatures, tweets)
+        return training_set
+
+
 
     def SVMTrainingSetExtractor(self, csvFile):
 
@@ -143,6 +146,7 @@ class TrainClassifier:
         result = self.featureListExtractor.SVMTrainingSetExtractor(self.training_file)
         problem = svm_problem(result['labels'], result['feature_vector'])
         param = svm_parameter('-q -b 1')
+        param.C = 10
         param.kernel_type = LINEAR
         classifier = svm_train(problem, param)
         svm_save_model(self.svmClassifier, classifier)
